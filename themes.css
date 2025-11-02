@@ -1,0 +1,70 @@
+/* Light theme (default) */
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --accent-primary: #667eea;
+    --accent-secondary: #764ba2;
+    --nav-bg: linear-gradient(135deg, #3c4983 0%, #3a0a69 100%);
+    --card-bg: #ffffff;
+    --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --border-color: #e0e0e0;
+    --hero-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2d2d2d;
+    --text-primary: #ffffff;
+    --text-secondary: #cccccc;
+    --accent-primary: #8b9eff;
+    --accent-secondary: #9b6fc6;
+    --nav-bg: linear-gradient(135deg, #1f2642 0%, #2a1147 100%);
+    --card-bg: #2d2d2d;
+    --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    --border-color: #404040;
+    --hero-gradient: linear-gradient(135deg, #1f2642 0%, #2a1147 100%);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    margin-left: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-toggle-icon {
+    font-size: 1.2rem;
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] {
+    color-scheme: dark;
+}
+
+[data-theme="dark"] body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .theme-toggle-icon {
+    content: "☀️";
+}
+
+/* Smooth transitions */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
